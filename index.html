@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="frontend/css/style.css">
     <link rel="shortcut icon" href="img/logo_pagina.png" type="image/png"> 
 </head>
 <body>
@@ -26,7 +26,7 @@
         <div class="cartao">
             <div class="imagem"><img src="img/banner_calculadora_numerica.png" alt="calculadora numerica"></div>
         <h3>CALCULADORA BÁSICA</h3>
-        <a href="calculadora_numerica/resumo.html">ACESSAR</a>
+        <a href="./frontend/calculadora_numerica/resumo.html">ACESSAR</a>
         </div>
 
          <div class="cartao">
@@ -80,10 +80,62 @@
        
     </section>
 
+    <!--- PARTE DE FEEDBACK   -->
+    <section class="feedback">
+
+        <h2>DEIXE SEU FEEDBACK</h2>
+
+        <p>
+            Queremos saber sua opinião.
+            Conte-nos como podemos melhorar o site.
+        </p>
+
+        <form id="form-feedback">
+
+            <label for="nome">Nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <label for="email">E-mail</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <label for="feedback">Seu feedback</label>
+
+            <textarea
+                id="feedback"
+                name="feedback"
+                placeholder="Digite seu feedback"
+                required
+            ></textarea>
+
+            <button type="submit">
+                ENVIAR FEEDBACK
+            </button>
+
+        </form>
+
+    </section>
+
+
 
     </main>
     <footer>
         <p align="center">SITE DESENVOLVIDO POR ALLAN DE SOUZA, ESTUDANTE DE ADS NO INSTITUTO FEDERAL DE SÃO PAULO.</p>
     </footer>
+
+    <script src="./frontend/js/script.js"></script>
 </body>
 </html>

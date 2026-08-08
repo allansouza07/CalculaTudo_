@@ -81,6 +81,77 @@ body{
     transform:scale(1.03);
     box-shadow: 0 9px 20px rgba(0,0,0,0.2);
 }
+
+
+
+
+
+.feedback {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+.feedback h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: white;
+}
+.feedback p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+}
+#form-feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+#form-feedback label {
+    font-weight: bold;
+    margin-top: 10px;
+    color:white;
+}
+#form-feedback input,
+#form-feedback textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+#form-feedback textarea {
+    height: 150px;
+    resize: vertical;
+}
+#form-feedback button {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #8483b3;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+#form-feedback button:hover {
+    transform: scale(1.03);
+}
+
+
 footer{
         display: flex;
         justify-content: center;
