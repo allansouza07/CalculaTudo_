@@ -5,6 +5,7 @@
 }
 body{
     background-color: rgb(24, 5, 90);
+    overflow-x: hidden;
 }
 /* barra de rolagem */
 ::-webkit-scrollbar {

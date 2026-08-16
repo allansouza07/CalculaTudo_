@@ -11,6 +11,24 @@ body{
     color:#333;
     line-height:1.7;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #7899cf;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #1565c0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0d47a1;
+}
 #voltar{
     position: relative;
     width:30px;
