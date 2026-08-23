@@ -16,17 +16,17 @@ body {
 
 
 ::-webkit-scrollbar-track {
-    background: #cf9f38;
+    background: #db8adb;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background: #aa7b14;
+    background: #c030a8;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #5c4508;
+    background: #500a3b;
 }
 #voltar {
     position: relative;
@@ -49,7 +49,7 @@ body {
 
 .hero h1 {
     font-size: 3rem;
-    color: #f97316;
+    color: #ec4899;
     margin-bottom: 20px;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .card h2 {
-    color: #f97316;
+    color: #ec4899;
     margin-bottom: 20px;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .item {
-    background: #fff7ed;
+    background: #fdf2f8;
     padding: 20px;
     border-radius: 12px;
     transition: .3s;
@@ -87,11 +87,11 @@ body {
 
 .item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(249, 115, 22, .25);
+    box-shadow: 0 5px 15px rgba(236, 72, 153, .25);
 }
 
 .item h3 {
-    color: #ea580c;
+    color: #db2777;
     margin-bottom: 10px;
 }
 
@@ -116,7 +116,7 @@ ul li {
 }
 
 #botao p {
-    background-color: #f97316;
+    background-color: #ec4899;
     width: 300px;
     height: 70px;
     border-radius: 50px;
@@ -131,7 +131,7 @@ ul li {
 }
 
 #botao p:hover {
-    background-color: #ea580c;
+    background-color: #db2777;
     transform: translateY(-3px);
 }
 
