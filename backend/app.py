@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 
 CORS(app)
-
+PYTHON BACKEND/APP.PY
 
 def conectar_banco():
 
