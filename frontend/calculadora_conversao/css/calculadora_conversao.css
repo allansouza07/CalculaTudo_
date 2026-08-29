@@ -1,0 +1,167 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(45deg, rgb(41, 112, 19), rgb(9, 77, 21));
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white
+}
+#voltar{
+    position: relative;
+    width:35px;
+    height:30px;
+    left:50px;
+    top:10px;
+}
+
+#titulo_principal{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 20px;
+}
+#tabela_moedas{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+#dolar{
+    background-color: rgb(105, 105, 233);
+    width:300px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+#dolar a{
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+    font-size: 15px;
+}
+#dolar:hover{
+    transform: scale(1.05);
+}
+#euro{
+    background-color: rgb(202, 211, 77);
+    width:300px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    
+}
+#euro a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px;
+}
+#euro:hover{
+    transform: scale(1.05);
+}
+#dolar_real{
+    background-color: rgb(197, 88, 88);
+    width:300px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+
+}
+#dolar_real a{
+    color:black;
+    text-decoration: none;
+    font-size: 15;
+}
+#euro_real{
+    background-color: rgb(211, 91, 205);
+    width:300px;
+    border-radius: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+#euro_real a{
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+}
+#euro_real:hover{
+    transform: scale(1.05);
+
+}
+#meio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculadora{
+    height:350px;
+    width:600px;
+    background-color: rgb(20, 19, 19);
+    margin-top: 25px;
+    border-radius: 40px;
+}
+#painel_acima{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+
+}
+#painel_acima2{
+    text-align: center;
+    font-size: 25px; 
+}
+#data{
+    text-align: right;
+    position: relative;
+    top:-30px;
+    left:-15px;
+}
+#valor_real{
+    display: flex;
+}
+#digitar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#botao{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 25px;
+    background-color: rgb(150, 173, 194);
+    border-radius: 40px;
+    color: black;
+    text-decoration: none;
+    width:140px;
+    height:40px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+#resultado_tela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    flex-direction: column;
+    font-size: 25px;
+
+}
+#resultado{
+    background-color: white;
+    height:40px;
+    width:300px;
+    border-radius: 50px;
+    color: black;
+    font-size:20px;
+    text-align: center;
+    font-size: 20px;
+}

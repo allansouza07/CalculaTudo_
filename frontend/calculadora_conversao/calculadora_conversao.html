@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Conversão</title>
+    <link rel="stylesheet" href="css/calculadora_conversao.css">
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png"> 
+
+</head>
+<body>
+    <a href="resumo_calculadora_conversao.html"><img src="../img/voltar_botao.png" alt="botao" id="voltar"></a>
+
+    <div id="titulo_principal">
+        <h1>CALCULADORA DE CONVERSÃO DE MOEDAS</h1>
+    </div>
+
+    <!---MOEDAS DO MUNDO TODO-->
+    <div id="tabela_moedas">
+        <div id="dolar">
+            <a href=""><p><b>🇺🇸 - Dólar Americano</b></p></a>
+        </div>
+
+        <div id="euro">
+            <a href="euro.html"><p><b>🇬🇧 - Euro</b></p></a>
+        </div>
+
+        <div id="dolar_real">
+            <a href="real_dolar.html"><p><b>🇧🇷 - Dólar para Real</b></p></a>
+        </div>
+        <div id="euro_real">
+            <a href="real_euro.html"><p><b>🇧🇷 - Euro para Real</b></p></a>
+        </div>
+    </div>
+
+
+    <div id = "meio">
+        <div id="calculadora">
+            <div id = "painel_acima"> 
+                <p>->1 dólar americano</p>
+            </div>
+            <div id="painel_acima2">
+                <p>-> 5,19 reais</p>
+            </div>
+            <div id="data">
+                <p>28/08/2026</p>
+            </div>
+
+            <div id="valor_real">
+                <div id="digitar">
+                    <label for="valor">Digite o valor em real</label>
+                    <input type="number" id="valor" placeholder="Digite o valor">
+                </div>
+                <div>
+                    <button onclick="converter()" id="botao">Calcular</button>
+                </div>     
+            </div>
+            <div id="resultado_tela">
+                    <p>Valor em dólar</p>
+                    <p id="resultado"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculadora_conversao.js"></script>
+</body>
+</html>
