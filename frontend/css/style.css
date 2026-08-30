@@ -194,7 +194,7 @@ footer{
         position: relative;
         width:20px;
         height:20px;
-        left:170px;
+        left:150px;
         top:00px;
         
     }
@@ -223,20 +223,20 @@ footer{
         top:80px;
         font-size: 15px;
         margin-bottom: 100px;
-        left:50px;
+        left:20px;
         
     }
     #titulo2{
         position: relative;
         font-size: 20px;
-        left:50px;
+        left:20px;
         
     }
     .cartao{
         height: 250px;
         width:250px;
         position: relative;
-        left:0px;
+        left:-20px;
     }
     .cartao h3{
         font-size:15px;
