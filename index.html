@@ -1,139 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <meta name="theme-color" content="#18055a">
+    <meta name="description" content="CalculaTudo: ferramentas práticas para cálculos do dia a dia, conversões, porcentagem, média escolar e muito mais.">
+    <title>CalculaTudo | Ferramentas para o dia a dia</title>
     <link rel="stylesheet" href="frontend/css/style.css">
-    <link rel="shortcut icon" href="img/logo_pagina.png" type="image/png"> 
+    <link rel="shortcut icon" href="img/logo_pagina.png" type="image/png">
 </head>
 <body>
     <header>
-        <div id="logo">
-        <img  src="img/logo_png.png" alt="logo">
-    </div>
-        <!-- PARTE DE CIMA -->
-    <h2 align="center" id = "titulo">Seja bem vindo!</h2>
-    <p align="center" id="titulo2">Qual calculadora você deseja utilizar hoje?</p>
-
-    
+        <div id="logo"><img src="img/logo_png.png" alt="Logo CalculaTudo"></div>
+        <h1 id="titulo">Seja bem-vindo ao CalculaTudo!</h1>
+        <p id="titulo2">Qual calculadora você deseja utilizar hoje?</p>
     </header>
-    
+
     <main>
-        
-    <!--- SECTION DE CALCULADORAS-->
-    <section id="sessao">
-        <div class="cartao">
-            <div class="imagem"><img src="img/banner_calculadora_numerica.png" alt="calculadora numerica"></div>
-        <h3>CALCULADORA BÁSICA</h3>
-        <a href="./frontend/calculadora_numerica/resumo.html">ACESSAR</a>
-        </div>
+        <section id="sessao" aria-label="Calculadoras disponíveis">
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_calculadora_numerica.png" alt="Ilustração da calculadora básica" loading="lazy"></div>
+                <h2>CALCULADORA BÁSICA</h2>
+                <a href="./frontend/calculadora_numerica/resumo.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_conversao_moedas.png" alt="Ilustração de conversão de moedas" loading="lazy"></div>
+                <h2>CONVERSÃO DE MOEDA</h2>
+                <a href="frontend/calculadora_conversao/resumo_calculadora_conversao.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_calculadora_porcentagem.png" alt="Ilustração da calculadora de porcentagem" loading="lazy"></div>
+                <h2>PORCENTAGEM</h2>
+                <a href="frontend/calculadora_porcentagem/resumo_calculadora_porcentagem.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_cpf.png" alt="Ilustração do verificador de CPF" loading="lazy"></div>
+                <h2>VERIFICADOR DE CPF</h2>
+                <a href="frontend/cpf/resumo_cpf.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_media_escolar.png" alt="Ilustração da calculadora de média escolar" loading="lazy"></div>
+                <h2>MÉDIA ESCOLAR</h2>
+                <a href="frontend/media_escolar/resumo_media.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/banner_juros_compostos.png" alt="Ilustração de juros compostos" loading="lazy"></div>
+                <h2>JUROS COMPOSTOS</h2>
+                <a href="frontend/juros_compostos/resumo_juros.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/BANNER_IDADE.png" alt="Ilustração da calculadora de idade" loading="lazy"></div>
+                <h2>CALCULADORA DE IDADE</h2>
+                <a href="frontend/calculadora_idade/resumo_idade.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/BANNER_CONVERSAO_TEMPERATURA.png" alt="Ilustração do conversor de temperatura" loading="lazy"></div>
+                <h2>CONVERSOR DE TEMPERATURA</h2>
+                <a href="frontend/conversao_temp/resumo_temperatura.html">Acessar</a>
+            </article>
+            <article class="cartao">
+                <div class="imagem"><img src="img/BANNER_IMC.png" alt="Ilustração da calculadora de IMC" loading="lazy"></div>
+                <h2>CALCULADORA IMC</h2>
+                <a href="frontend/imc/resumo_imc.html">Acessar</a>
+            </article>
+        </section>
 
-         <div class="cartao">
-            <div class="imagem"><img src="img/banner_conversao_moedas.png" alt="calculadora conversao de moedas"></div>
-        <h3>CONVERSÃO DE MOEDA</h3>
-        <a href="frontend/calculadora_conversao/resumo_calculadora_conversao.html">ACESSAR</a>
-        </div>
+        <section class="feedback" aria-labelledby="feedback-titulo">
+            <h2 id="feedback-titulo">DEIXE SEU FEEDBACK</h2>
+            <p>Queremos saber sua opinião. Conte-nos como podemos melhorar o site.</p>
+            <form id="form-feedback">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
 
-         <div class="cartao">
-            <div class="imagem"><img src="img/banner_calculadora_porcentagem.png" alt="calculado porcentagem"></div>
-        <h3>PORCENTAGEM</h3>
-        <a href="frontend/calculadora_porcentagem/resumo_calculadora_porcentagem.html">ACESSAR</a>
-        </div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
 
-         <div class="cartao">
-            <div class="imagem"><img src="img/banner_cpf.png" alt="cpf ultimos digitos"></div>
-        <h3>VERIFICADOR CPF</h3>
-        <a href="frontend/cpf/resumo_cpf.html">ACESSAR</a>
-        </div>
+                <label for="feedback">Seu feedback</label>
+                <textarea id="feedback" name="feedback" placeholder="Conte o que achou do CalculaTudo..." required></textarea>
 
-         <div class="cartao">
-            <div class="imagem"><img src="img/banner_media_escolar.png" alt="media escoalr"></div>
-        <h3>MÉDIA ESCOLAR</h3>
-        <a href="frontend/media_escolar/resumo_media.html">ACESSAR</a>
-        </div>
-
-         <div class="cartao">
-            <div class="imagem"><img src="img/banner_juros_compostos.png" alt="juros compostos"></div>
-        <h3>JUROS COMPOSTOS</h3>
-        <a href="frontend/juros_compostos/resumo_juros.html">ACESSAR</a>
-        </div>
-
-         <div class="cartao">
-            <div class="imagem"><img src="img/BANNER_IDADE.png" alt="IDADE"></div>
-        <h3>CALCULADORA DE IDADE</h3>
-        <a href="frontend/calculadora_idade/resumo_idade.html">ACESSAR</a>
-        </div>
-
-         <div class="cartao">
-            <div class="imagem"><img src="img/BANNER_CONVERSAO_TEMPERATURA.png" alt="CONVERSAO TEMPERATURA"></div>
-        <h3>CONVERSOR TEMPERATURA</h3>
-        <a href="frontend/conversao_temp/resumo_temperatura.html">ACESSAR</a>
-        </div>
-
-         <div class="cartao">
-            <div class="imagem"><img src="img/BANNER_IMC.png" alt="IMC"></div>
-        <h3>CALCULADORA IMC</h3>
-        <a href="frontend/imc/resumo_imc.html">ACESSAR</a>
-        </div>
-
-       
-    </section>
-
-    <!--- PARTE DE FEEDBACK   -->
-    <section class="feedback">
-
-        <h2>DEIXE SEU FEEDBACK</h2>
-
-        <p>
-            Queremos saber sua opinião.
-            Conte-nos como podemos melhorar o site.
-        </p>
-
-        <form id="form-feedback">
-
-            <label for="nome">Nome</label>
-
-            <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Digite seu nome"
-                required
-            >
-
-            <label for="email">E-mail</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite seu e-mail"
-                required
-            >
-
-            <label for="feedback">Seu feedback</label>
-
-            <textarea
-                id="feedback"
-                name="feedback"
-                placeholder="Digite seu feedback"
-                required
-            ></textarea>
-
-            <button type="submit">
-                ENVIAR FEEDBACK
-            </button>
-
-        </form>
-
-    </section>
-
-
-
+                <button type="submit">Enviar feedback</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p align="center">SITE DESENVOLVIDO POR ALLAN DE SOUZA, ESTUDANTE DE ADS NO INSTITUTO FEDERAL DE SÃO PAULO.</p>
+        <p>Site desenvolvido por Allan de Souza, estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo.</p>
     </footer>
 
     <script src="./frontend/js/script.js"></script>
