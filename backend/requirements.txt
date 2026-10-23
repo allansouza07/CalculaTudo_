@@ -1,4 +1,4 @@
-Flask\nflask-cors\nmysql-connector-python\npython-dotenv\ngunicorn\n
+
 Flask
 flask-cors
 mysql-connector-python
