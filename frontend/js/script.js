@@ -1,5 +1,17 @@
 // Após o deploy, substitua pela URL pública da API Railway, sem barra no final.
-const API_URL = window.CALCULATUDO_API_URL || "mysql://root:PnzHXYRMVneblNZGKSnMRsTMBDCmvRdO@tokaido.proxy.rlwy.net:12964/railway";
+const API_URL = "https://refreshing-rejoicing-production-0ae5.up.railway.app.up.railway.app";
+
+fetch(`${API_URL}/feedback`, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        nome: nome,
+        email: email,
+        feedback: feedback
+    })
+});
 const formulario = document.getElementById("form-feedback");
 
 if (formulario) {
