@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f97316">
+    <meta name="description" content="Calculadora de juros compostos do CalculaTudo.">
+    <title>Calculadora de Juros Compostos | CalculaTudo</title>
+
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png">
+    <link rel="stylesheet" href="css/juros_compostos.css">
+    <script src="js/juros_compostos.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <a class="back-link" href="resumo_juros.html">← Voltar</a>
+
+        <header class="hero">
+            
+            <h1>Calculadora de <span>juros compostos</span></h1>
+            
+        </header>
+
+        <section class="calculator-layout">
+            <form id="form-juros" class="panel form-panel" novalidate>
+                <div class="panel-heading">
+                    <div>
+                        <span class="step">SIMULAÇÃO</span>
+                        <h2>Seus dados</h2>
+                    </div>
+                    <span class="heading-icon" aria-hidden="true">↗</span>
+                </div>
+
+                <label for="capital">Capital inicial (R$)</label>
+                <div class="input-wrap">
+                    <span aria-hidden="true">R$</span>
+                    <input
+                        id="capital"
+                        name="capital"
+                        type="number"
+                        min="0.01"
+                        step="0.01"
+                        value="1000"
+                        required
+                        inputmode="decimal"
+                        placeholder="Ex.: 1000,00"
+                    >
+                </div>
+
+                <div class="field-grid">
+                    <div>
+                        <label for="taxa">Taxa de juros (%)</label>
+                        <input
+                            id="taxa"
+                            name="taxa"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            value="1"
+                            required
+                            inputmode="decimal"
+                            placeholder="Ex.: 1,5"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="periodicidade">Periodicidade da taxa</label>
+                        <select id="periodicidade" name="periodicidade">
+                            <option value="mensal" selected>Ao mês</option>
+                            <option value="anual">Ao ano</option>
+                            <option value="diaria">Ao dia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-grid">
+                    <div>
+                        <label for="tempo">Período</label>
+                        <input
+                            id="tempo"
+                            name="tempo"
+                            type="number"
+                            min="1"
+                            step="1"
+                            value="12"
+                            required
+                            inputmode="numeric"
+                            placeholder="Ex.: 12"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="unidade">Unidade do período</label>
+                        <select id="unidade" name="unidade">
+                            <option value="meses" selected>Meses</option>
+                            <option value="anos">Anos</option>
+                            <option value="dias">Dias</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <span aria-hidden="true">ⓘ</span>
+                    <p>
+                        Se a taxa e o período tiverem unidades diferentes,
+                        o sistema converterá o tempo usando 30 dias por mês
+                        e 365 dias por ano. A simulação não inclui aportes,
+                        impostos ou tarifas.
+                    </p>
+                </div>
+
+                <button type="submit" class="calculate-button">
+                    Calcular juros compostos <span aria-hidden="true">→</span>
+                </button>
+
+                <button type="button" id="limpar" class="clear-button">
+                    Restaurar valores
+                </button>
+
+                <p id="erro" class="error-message" role="alert" aria-live="polite"></p>
+            </form>
+
+            <section class="panel result-panel" aria-live="polite">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step blue-step">RESULTADO DA SIMULAÇÃO</span>
+                        <h2>Veja a projeção</h2>
+                    </div>
+                    <span class="heading-icon blue-icon" aria-hidden="true">▥</span>
+                </div>
+
+                <div class="total-card">
+                    <p>Montante final estimado</p>
+                    <strong id="montante">R$ 1.126,83</strong>
+                    <div class="total-meta">
+                        <span id="periodo-resumo">Em 12 meses</span>
+                        <span class="mini-badge">Juros compostos</span>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-icon capital-icon">R$</span>
+                        <p>Capital inicial</p>
+                        <strong id="capital-resumo">R$ 1.000,00</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-icon interest-icon">↗</span>
+                        <p>Total de juros</p>
+                        <strong id="juros">R$ 126,83</strong>
+                    </div>
+
+                    <div class="stat stat-wide">
+                        <span class="stat-icon rate-icon">%</span>
+                        <p>Rentabilidade acumulada</p>
+                        <strong id="rentabilidade">12,68%</strong>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <div class="chart-heading">
+                        <h3>Evolução do montante</h3>
+                        <p>Capital inicial comparado ao valor projetado</p>
+                    </div>
+
+                    <div class="chart-wrap">
+                        <canvas
+                            id="grafico"
+                            role="img"
+                            aria-label="Gráfico da evolução do montante"
+                        ></canvas>
+                        <p id="grafico-fallback" class="chart-fallback"></p>
+                    </div>
+                </div>
+
+                <div class="formula">
+                    <span>FÓRMULA UTILIZADA</span>
+                    <p>M = C × (1 + i)<sup>t</sup></p>
+                    <small>
+                        M = montante final · C = capital inicial ·
+                        i = taxa por período · t = número de períodos
+                    </small>
+                </div>
+            </section>
+        </section>
+
+        <footer>
+            <p >
+                Site desenvolvido por Allan de Souza, estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo.
+            </p>
+        </footer>
+    </main>
+</body>
+</html>
