@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcule sua média escolar usando 2, 3 ou 4 notas.">
+    <title>Calculadora de Média Escolar | CalculaTudo</title>
+
+    <link rel="stylesheet" href="css/calculadora_media.css">
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png">
+    
+</head>
+<body>
+    <header class="topo">
+        
+        <a href="resumo_media.html" class="link-voltar">
+            ← Voltar
+        </a>
+    </header>
+
+    <main class="pagina">
+        <section class="introducao">
+
+            <h1>Calculadora de <span>média escolar</span></h1>
+
+            <p>
+                Informe suas notas e descubra sua média aritmética.
+                Escolha entre 2, 3 ou 4 avaliações.
+            </p>
+        </section>
+
+        <section class="calculadora" aria-labelledby="titulo-calculadora">
+            <div class="cabecalho-card">
+                <div>
+                    <h2 id="titulo-calculadora">Calcule suas notas</h2>
+                    <p>Informe notas de 0 a 10.</p>
+                </div>
+
+               
+            </div>
+
+            <label for="quantidadeNotas">Quantidade de notas</label>
+
+            <select id="quantidadeNotas">
+                <option value="2">2 notas</option>
+                <option value="3">3 notas</option>
+                <option value="4" selected>4 notas</option>
+            </select>
+
+            <form id="formMedia" novalidate>
+                <div id="camposNotas" class="campos-notas"></div>
+
+                <button type="submit" class="botao-principal">
+                    Calcular média
+                </button>
+
+                <button type="button" id="limpar" class="botao-secundario">
+                    Limpar notas
+                </button>
+            </form>
+
+            <section id="resultado" class="resultado" aria-live="polite" hidden>
+                <p class="rotulo-resultado">Sua média</p>
+
+                <p id="valorMedia" class="valor-media">0,00</p>
+
+                <p id="situacao" class="situacao"></p>
+
+                <div id="detalhes" class="detalhes"></div>
+            </section>
+
+            <p class="nota-rodape">
+                A média calculada é a média aritmética simples.
+                Confira os critérios de aprovação da sua instituição.
+            </p>
+        </section>
+
+        <section class="explicacao">
+            <h2>Como a média é calculada?</h2>
+
+            <p>
+                Somamos as notas informadas e dividimos o resultado
+                pela quantidade de avaliações.
+            </p>
+
+            <div class="formula">
+                Média = soma das notas ÷ quantidade de notas
+            </div>
+
+            <p class="exemplo">
+                <strong>Exemplo:</strong> notas 8 e 6 →
+                (8 + 6) ÷ 2 = média 7,0.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site desenvolvido por Allan de Souza, estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo.</p>
+    </footer>
+
+    <script src="js/calculadora_media.js"></script>
+</body>
+</html>

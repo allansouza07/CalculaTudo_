@@ -4,10 +4,10 @@
     --amarelo-claro: #fff8d9;
     --azul: #145da0;
     --azul-escuro: #0b2d4f;
-    --fundo: #f4f7fb;
+    --fundo: #ece929;
     --texto: #202938;
     --cinza: #657184;
-    --borda: #dce3ec;
+    --borda: #e8ecdc;
     --branco: #ffffff;
     --sucesso: #167443;
     --erro: #b42318;
@@ -27,24 +27,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-
-::-webkit-scrollbar-track {
-    background: #bfcc0e;
-}
-
-
-::-webkit-scrollbar-thumb {
-    background: #88910b;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #3d5206;
-}
 .topo {
     width: 100%;
     padding: 20px 7%;
