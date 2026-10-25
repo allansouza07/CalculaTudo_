@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valide CPFs e gere números para testes com o CalculaTudo.">
+    <title>Verificador de CPF | CalculaTudo</title>
+    <link rel="stylesheet" href="css/calculadora_cpf.css">
+</head>
+<body>
+    <header class="topo">
+        <a href="./resumo_cpf.html" class="voltar">← Voltar</a>
+    </header>
+
+    <main class="container">
+        <section class="cabecalho">
+            <h1>Verificador de <span>CPF</span></h1>
+            <p>
+                Verifique a validade matemática de um CPF ou gere um.
+            </p>
+        </section>
+
+        <section class="cartao">
+            <h2>Validar CPF</h2>
+            <p class="descricao">Digite os 11 dígitos do CPF.</p>
+
+            <label for="cpf">Número do CPF</label>
+            <input
+                type="text"
+                id="cpf"
+                placeholder="000.000.000-00"
+                inputmode="numeric"
+                maxlength="14"
+                autocomplete="off"
+            >
+
+            <button type="button" id="btnValidar" class="botao principal">
+                Verificar CPF
+            </button>
+
+            <div id="resultado" class="resultado" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="cartao gerador">
+            <h2>Gerador de CPF</h2>
+            <p class="descricao">
+                Gere um número matematicamente válido para testes.
+            </p>
+
+            <button type="button" id="btnGerar" class="botao secundario">
+                Gerar CPF aleatório
+            </button>
+
+            <div class="cpf-gerado">
+                <output id="cpfGerado">000.000.000-00</output>
+                <button type="button" id="btnCopiar" class="botao copiar">
+                    Copiar
+                </button>
+            </div>
+
+            <p id="mensagemCopia" class="mensagem-copia" role="status"></p>
+        </section>
+
+        <aside class="aviso">
+            <strong>Importante:</strong>
+            esta ferramenta verifica apenas o algoritmo matemático do CPF.
+            Ela não confirma a existência do número, o cadastro na Receita
+            Federal nem a identidade de qualquer pessoa. Utilize os números
+            gerados somente em ambientes de teste.
+        </aside>
+    </main>
+
+    <footer>
+        <p>Site desenvolvido por Allan de Souza, estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo.</p>
+    </footer>
+
+    <script src="js/calculadora_cpf.js"></script>
+</body>
+</html>
