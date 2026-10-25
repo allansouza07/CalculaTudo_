@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18055a">
+  <meta name="description" content="Calcule porcentagens, aumentos, descontos e variações percentuais de forma rápida e gratuita.">
+  <title>Calculadora de Porcentagem | CalculaTudo</title>
+  <link rel="stylesheet" href="css/calculadora_porcentagem.css">
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png">
+  
+
+</head>
+<body>
+  <main class="container">
+    <a class="back-link" href="./resumo_calculadora_porcentagem.html" aria-label="Voltar para o início">
+      <img src="../img/voltar_botao.png" alt="" aria-hidden="true">
+      
+    </a>
+
+    <header class="page-header">
+     
+      <h1>Calculadora de <span>porcentagem</span></h1>
+    </header>
+
+    <section class="calculator" aria-labelledby="calc-title">
+      <div class="calculator-top">
+        <div>
+          <p class="section-kicker">CÁLCULO RÁPIDO</p>
+          <h2 id="calc-title">O que você deseja calcular?</h2>
+        </div>
+        <span class="percent-icon" aria-hidden="true">%</span>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Tipo de cálculo">
+        <button class="tab active" type="button" role="tab" aria-selected="true" data-mode="part">Porcentagem de um valor</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-mode="change">Aumento ou desconto</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-mode="difference">Variação percentual</button>
+      </div>
+
+      <form id="percentage-form" novalidate>
+        <div class="fields" id="fields">
+          <div class="field">
+            <label for="percent">Porcentagem (%)</label>
+            <div class="input-wrap"><input id="percent" name="percent" type="text" inputmode="decimal" placeholder="Ex.: 20" autocomplete="off"><span>%</span></div>
+          </div>
+          <div class="field">
+            <label for="base">Valor total</label>
+            <div class="input-wrap"><span class="prefix">#</span><input id="base" name="base" type="text" inputmode="decimal" placeholder="Ex.: 150" autocomplete="off"></div>
+          </div>
+        </div>
+        <p class="hint" id="hint">Descubra quanto uma porcentagem representa de um número.</p>
+        <div class="form-actions">
+          <button class="calculate-button" type="submit">Calcular resultado <span aria-hidden="true">→</span></button>
+          <button class="clear-button" id="clear" type="button">Limpar</button>
+        </div>
+        <p class="error" id="error" role="alert" hidden></p>
+      </form>
+
+      <section class="result" id="result" aria-live="polite" hidden>
+        <div class="result-label" id="result-label">RESULTADO</div>
+        <div class="result-number" id="result-number">R$ 0,00</div>
+        <p id="result-description"></p>
+        <div class="formula" id="formula"></div>
+        <button type="button" class="copy-button" id="copy-result">Copiar resultado</button>
+        <span id="copy-status" class="copy-status" role="status"></span>
+      </section>
+    </section>
+
+
+    <footer><p>CalculaTudo · Cálculos práticos para facilitar o seu dia a dia.</p></footer>
+  </main>
+  <script src="js/calculadora_porcentagem.js"></script>
+</body>
+</html>
