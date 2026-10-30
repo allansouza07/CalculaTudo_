@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e84b9b">
+    <meta name="description" content="Converta temperaturas entre Celsius, Fahrenheit e Kelvin.">
+
+    <title>Conversor de Temperatura | CalculaTudo</title>
+
+    <link rel="stylesheet" href="css/conversor_temp.css">
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png">
+    
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="back-link" href="resumo_temperatura.html">
+            <img src="../img/voltar_botao.png" alt="">
+            
+        </a>
+
+    
+        
+    </header>
+
+    <main class="page-content">
+
+        <section class="intro">
+            
+
+            <h1>Conversor de temperatura</h1>
+
+            <p>
+                Escolha as escalas, informe um valor e faça sua conversão
+                de forma simples e instantânea.
+            </p>
+        </section>
+
+        <section class="converter-card">
+
+            <div class="card-heading">
+                <div>
+                    <span class="section-kicker">CALCULADORA</span>
+                    <h2>Converter temperatura</h2>
+                </div>
+
+                
+            </div>
+
+            <form id="temperature-form">
+
+                <div class="conversion-selectors">
+
+                    <div class="field-group">
+                        <label for="from-unit">Converter de</label>
+
+                        <select id="from-unit" name="from-unit">
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit">Fahrenheit (°F)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+
+                    <button
+                        class="swap-button"
+                        type="button"
+                        id="swap-units"
+                        aria-label="Inverter as escalas"
+                        title="Inverter escalas">
+                        ⇄
+                    </button>
+
+                    <div class="field-group">
+                        <label for="to-unit">Converter para</label>
+
+                        <select id="to-unit" name="to-unit">
+                            <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field-group value-field">
+
+                    <label for="temperature-value">
+                        Valor da temperatura
+                    </label>
+
+                    <div class="input-wrap">
+                        <input
+                            id="temperature-value"
+                            name="temperature-value"
+                            type="number"
+                            step="any"
+                            inputmode="decimal"
+                            placeholder="Ex.: 25"
+                            required>
+
+                        <span class="input-unit" id="input-unit">°C</span>
+                    </div>
+
+                    <small>
+                        Digite a temperatura que deseja converter.
+                    </small>
+
+                </div>
+
+                <button class="convert-button" type="submit">
+                    <span>Converter temperatura</span>
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <section class="result-panel" aria-live="polite">
+
+                <span class="result-label">
+                    RESULTADO DA CONVERSÃO
+                </span>
+
+                <p class="result-value" id="result-value">
+                    — <span>°F</span>
+                </p>
+
+                <p class="result-description" id="result-description">
+                    O resultado aparecerá aqui.
+                </p>
+
+                <button
+                    class="copy-button"
+                    type="button"
+                    id="copy-result"
+                    disabled>
+                    Copiar resultado
+                </button>
+
+            </section>
+
+            <p class="error-message" id="error-message" role="alert"></p>
+
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+        <p>
+            Site desenvolvido por Allan de Souza, estudante de Análise e
+            Desenvolvimento de Sistemas no Instituto Federal de São Paulo.
+        </p>
+    </footer>
+
+    <script src="js/conversor_temp.js"></script>
+
+</body>
+</html>
