@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6d28d9">
+    <meta name="description" content="Calcule seu Índice de Massa Corporal.">
+
+    <title>Calculadora de IMC | CalculaTudo</title>
+
+    <link rel="shortcut icon" href="../../img/logo_png.png" type="image/png">
+    <link rel="stylesheet" href="css/calculadora_imc.css">
+    <script src="js/calculadora_imc.js" defer></script>
+</head>
+
+<body>
+<main class="page">
+
+    <a class="back-link" href="resumo_imc.html">← Voltar</a>
+
+    <header class="hero">
+        <h1>Calculadora de <span>IMC</span></h1>
+        <p>Informe seu peso e sua altura para calcular o Índice de Massa Corporal.</p>
+    </header>
+
+    <section class="calculator">
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <span class="step">PASSO ÚNICO</span>
+                    <h2>Seus dados</h2>
+                </div>
+                
+            </div>
+
+            <form id="form-imc" novalidate>
+
+                <div class="field">
+                    <label for="peso">Peso <span>(kg)</span></label>
+
+                    <div class="input-wrap">
+                        <input
+                            type="number"
+                            id="peso"
+                            placeholder="Ex.: 70,5"
+                            min="1"
+                            max="500"
+                            step="0.1"
+                            inputmode="decimal"
+                            required
+                        >
+                        <span class="unit">kg</span>
+                    </div>
+
+                    <p class="hint">Utilize quilogramas. Exemplo: 70,5</p>
+                </div>
+
+                <div class="field">
+                    <label for="altura">Altura <span>(m)</span></label>
+
+                    <div class="input-wrap">
+                        <input
+                            type="number"
+                            id="altura"
+                            placeholder="Ex.: 1,75"
+                            min="0.5"
+                            max="2.8"
+                            step="0.01"
+                            inputmode="decimal"
+                            required
+                        >
+                        <span class="unit">m</span>
+                    </div>
+
+                    <p class="hint">Utilize metros. Exemplo: 1,75</p>
+                </div>
+
+                <button type="submit" class="calculate-button">
+                    Calcular meu IMC →
+                </button>
+
+                <button type="button" id="limpar" class="clear-button">
+                    Limpar campos
+                </button>
+
+                <p id="erro" class="error-message"
+                   role="alert" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel result-panel"
+                 aria-live="polite">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="step">SEU RESULTADO</span>
+                    <h2>Seu índice corporal</h2>
+                </div>
+                
+            </div>
+
+            <div class="imc-highlight">
+                <span class="result-label">Seu IMC é</span>
+
+                <strong id="valor-imc">—</strong>
+
+                <span class="classification" id="classificacao">
+                    Aguardando seus dados
+                </span>
+            </div>
+
+            <div class="scale">
+                <div class="scale-track">
+                    <span class="range range-low"></span>
+                    <span class="range range-healthy"></span>
+                    <span class="range range-high"></span>
+                    <span class="range range-very-high"></span>
+
+                    <span class="scale-marker" id="marcador" hidden></span>
+                </div>
+
+                <div class="scale-labels">
+                    <span>Baixo</span>
+                    <span>Adequado</span>
+                    <span>Elevado</span>
+                </div>
+            </div>
+
+            <div class="result-details">
+
+                <div class="detail">
+                    <span class="detail-icon">⚖</span>
+                    <div>
+                        <p>Peso informado</p>
+                        <strong id="peso-informado">—</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span class="detail-icon">↕</span>
+                    <div>
+                        <p>Altura informada</p>
+                        <strong id="altura-informada">—</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="result-message" id="mensagem-resultado">
+                <span>💡</span>
+                <p>
+                    Preencha os campos e selecione calcular
+                    para visualizar seu resultado.
+                </p>
+            </div>
+
+        </section>
+
+    </section>
+
+    
+
+    <footer>
+        <p>
+            Site desenvolvido por Allan de Souza, estudante de
+            Análise e Desenvolvimento de Sistemas no Instituto
+            Federal de São Paulo.
+        </p>
+    </footer>
+
+</main>
+</body>
+</html>
