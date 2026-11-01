@@ -1,349 +1,92 @@
-*{
-    margin:0px;
-    padding: 0px;
-    box-sizing: border-box;
+:root {
+    color-scheme: dark;
+    --verde: #43d18a; --texto: #f3faf6; --texto-suave: #a8beb2; --borda: rgba(170,220,190,.14);
 }
-body{
-    background-image: linear-gradient(45deg, rgb(41, 112, 19), rgb(9, 77, 21));
-    height:100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    color:white
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    min-height:100vh; font-family:Arial,Helvetica,sans-serif; color:var(--texto);
+    background:radial-gradient(circle at 15% 5%,#16452f 0,transparent 35%),linear-gradient(145deg,#07130f,#0c2118 60%,#07130f);
+    padding:18px 22px 30px;
 }
-#voltar{
-    position: relative;
-    width:35px;
-    height:30px;
-    left:50px;
-    top:10px;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-#titulo_principal{
-    font-size: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 20px;
-}
-#tabela_moedas{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-#dolar{
-    background-color: rgb(105, 105, 233);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-#dolar a{
-    color:rgb(0, 0, 0);
-    font-size: 15px;
-    text-decoration: none;
-    font-size: 15px;
-}
-#dolar:hover{
-    transform: scale(1.05);
-}
-#euro{
-    background-color: rgb(202, 211, 77);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-    
-}
-#euro a{
-    color:rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 15px;
-}
-#euro:hover{
-    transform: scale(1.05);
-}
-#dolar_real{
-    background-color: rgb(197, 88, 88);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
 
-}
-#dolar_real a{
-    color:black;
-    text-decoration: none;
-    font-size: 15;
-}
-#euro_real{
-    background-color: rgb(211, 91, 205);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-#euro_real a{
-    color:black;
-    text-decoration: none;
-    font-size: 15px;
-}
-#euro_real:hover{
-    transform: scale(1.05);
-
-}
-#meio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#calculadora{
-    height:350px;
-    width:600px;
-    background-color: rgb(20, 19, 19);
-    margin-top: 25px;
-    border-radius: 40px;
-}
-#painel_acima{
-    text-align: center;
-    margin-top: 15px;
-    font-size: 25px;
-
-}
-#painel_acima2{
-    text-align: center;
-    font-size: 25px; 
-}
-#data{
-    text-align: right;
-    position: relative;
-    top:-30px;
-    left:-15px;
-}
-#valor_real{
-    display: flex;
-}
-#digitar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-#botao{
-    margin-left: 50px;
-    margin-top: 50px;
-    font-size: 25px;
-    background-color: rgb(150, 173, 194);
-    border-radius: 40px;
-    color: black;
-    text-decoration: none;
-    width:140px;
-    height:40px;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-}
-#resultado_tela{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    flex-direction: column;
-    font-size: 25px;
-
-}
-#resultado{
-    background-color: white;
-    height:40px;
-    width:300px;
-    border-radius: 50px;
-    color: black;
-    font-size:20px;
-    text-align: center;
-    font-size: 20px;
-}
-footer{
-    width:100%;
-    height:70px;
-    background-color: rgb(9, 221, 55);
-    color: black;
-    margin-top: 100px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+::-webkit-scrollbar-track {
+    background: #97cfa1;
 }
 
-@media (max-width: 700px){
-    #voltar{
-    position: relative;
-    width:35px;
-    height:30px;
-    left:180px;
-    top:10px;
+
+::-webkit-scrollbar-thumb {
+    background: #0ca526;
+    border-radius: 10px;
 }
 
-titulo_principal{
-    font-size: 7px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 20px;
+::-webkit-scrollbar-thumb:hover {
+    background: #024d05;
 }
-#tabela_moedas{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+#voltar { width:35px; height:30px; object-fit:contain; }
+.pagina { width:min(100%,950px); margin:14px auto 0; }
+.cabecalho { text-align:center; margin:20px auto 26px; max-width:720px; }
+.sobretitulo { color:var(--verde); font-size:11px; font-weight:800; letter-spacing:2.2px; margin-bottom:10px; }
+.cabecalho h1 { font-size:clamp(27px,4vw,40px); line-height:1.15; margin-bottom:12px; }
+.descricao { color:var(--texto-suave); line-height:1.6; font-size:15px; }
+.atalhos { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px; }
+.atalho {
+    display:flex; justify-content:center; align-items:center; text-align:center; min-height:48px; padding:10px;
+    border:1px solid var(--borda); border-radius:12px; color:var(--texto-suave); text-decoration:none;
+    font-size:13px; font-weight:700; background:rgba(16,35,27,.75); transition:.2s ease;
 }
-#dolar{
-    background-color: rgb(105, 105, 233);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+.atalho:hover { border-color:var(--verde); color:var(--texto); transform:translateY(-2px); }
+.atalho.ativo { color:#062114; background:var(--verde); border-color:var(--verde); }
+.conversor {
+    background:linear-gradient(145deg,rgba(19,45,33,.98),rgba(12,29,22,.98)); border:1px solid var(--borda);
+    border-radius:22px; padding:clamp(20px,4vw,36px); box-shadow:0 22px 65px rgba(0,0,0,.28);
 }
-#dolar a{
-    color:rgb(0, 0, 0);
-    font-size: 15px;
-    text-decoration: none;
-    font-size: 15px;
+.cartao-topo { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; }
+.etiqueta { font-size:10px; letter-spacing:1.8px; color:var(--verde); font-weight:800; }
+.cartao-topo h2 { font-size:clamp(20px,3vw,25px); margin-top:8px; }
+.status { display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--texto-suave); }
+.ponto { display:inline-block; width:8px; height:8px; border-radius:50%; background:currentColor; }
+.status.sucesso { color:var(--verde); } .status.erro,.mensagem.erro { color:#ff7777; }
+.status.aviso,.mensagem.aviso-texto { color:#f4c76a; }
+.status.carregando .ponto { animation:pulsar 1s infinite alternate; }
+@keyframes pulsar { to { opacity:.25; } }
+.cotacao {
+    margin:26px 0; padding:20px; border-radius:15px; background:rgba(3,15,10,.48);
+    border:1px solid var(--borda); display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;
 }
-#dolar:hover{
-    transform: scale(1.05);
+.cotacao-bloco,.cotacao-data { display:flex; flex-direction:column; gap:8px; }
+.cotacao-bloco span,.cotacao-data span { color:var(--texto-suave); font-size:13px; }
+.cotacao-bloco strong { color:var(--verde); font-size:clamp(25px,4vw,34px); }
+.cotacao-data { text-align:right; } .cotacao-data strong { font-size:14px; font-weight:600; }
+.campos { display:grid; grid-template-columns:1fr 35px 1fr; align-items:end; gap:15px; }
+.campo { display:flex; flex-direction:column; gap:10px; min-width:0; color:var(--texto-suave); font-size:13px; font-weight:700; }
+.input-moeda,.campo-resultado output {
+    min-height:62px; display:flex; align-items:center; gap:12px; padding:0 16px;
+    border:1px solid var(--borda); border-radius:12px; background:#10231b; color:var(--texto); font-size:19px; font-weight:700;
 }
-#euro{
-    background-color: rgb(202, 211, 77);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-    
-}
-#euro a{
-    color:rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 15px;
-}
-#euro:hover{
-    transform: scale(1.05);
-}
-#dolar_real{
-    background-color: rgb(197, 88, 88);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-
-}
-#dolar_real a{
-    color:black;
-    text-decoration: none;
-    font-size: 15;
-}
-#euro_real{
-    background-color: rgb(211, 91, 205);
-    width:300px;
-    border-radius: 40px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-#euro_real a{
-    color:black;
-    text-decoration: none;
-    font-size: 15px;
-}
-#euro_real:hover{
-    transform: scale(1.05);
-
-}
-#meio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#calculadora{
-    height:250px;
-    width:300px;
-    background-color: rgb(20, 19, 19);
-    margin-top: 25px;
-    border-radius: 40px;
-}
-#painel_acima{
-    text-align: center;
-    margin-top: 15px;
-    font-size: 15px;
-
-}
-#painel_acima2{
-    text-align: center;
-    font-size: 15px; 
-}
-#data{
-    text-align: right;
-    position: relative;
-    top:-30px;
-    left:-15px;
-    font-size: 10px;
-}
-#valor_real{
-    display: flex;
-}
-#digitar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-#botao{
-    margin-left: -175px;
-    margin-top: 70px;
-    font-size: 15px;
-    background-color: rgb(150, 173, 194);
-    border-radius: 40px;
-    color: black;
-    text-decoration: none;
-    width:100px;
-    height:30px;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-}
-#resultado_tela{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    flex-direction: column;
-    font-size: 15px;
-
-}
-#resultado{
-    background-color: white;
-    height:20px;
-    width:150px;
-    border-radius: 50px;
-    color: black;
-    font-size:20px;
-    text-align: center;
-    font-size: 20px;
-}
-footer{
-    width:100%;
-    height:70px;
-    background-color: rgb(9, 221, 55);
-    color: black;
-    margin-top: 300px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.input-moeda span { color:var(--verde); white-space:nowrap; }
+.input-moeda input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:var(--texto); font:inherit; font-size:18px; }
+.input-moeda input::placeholder { color:#71887b; font-size:15px; font-weight:400; }
+.input-moeda:focus-within { border-color:var(--verde); box-shadow:0 0 0 3px rgba(67,209,138,.12); }
+.campo-resultado output { color:var(--verde); overflow-wrap:anywhere; }
+.seta { color:var(--verde); font-size:22px; text-align:center; padding-bottom:19px; }
+.acoes { display:flex; gap:12px; margin-top:25px; flex-wrap:wrap; }
+button { min-height:47px; border:0; border-radius:10px; padding:0 22px; cursor:pointer; font-weight:800; font-size:14px; transition:.2s ease; }
+button:disabled { opacity:.55; cursor:wait; }
+#botao { color:#062114; background:var(--verde); } #botao:hover:not(:disabled) { background:#68e6a5; transform:translateY(-1px); }
+.botao-secundario { color:var(--texto); background:#173328; border:1px solid var(--borda); }
+.botao-secundario:hover:not(:disabled) { border-color:var(--verde); }
+.mensagem { min-height:20px; margin-top:15px; color:var(--texto-suave); font-size:13px; line-height:1.5; }
+.aviso { border-top:1px solid var(--borda); padding-top:17px; margin-top:23px; color:#92a99c; font-size:12px; line-height:1.6; }
+footer { margin-top:27px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap; color:var(--texto-suave); font-size:12px; }
+footer a { color:var(--verde); }
+@media(max-width:700px) {
+ body { padding:14px 15px 25px; } .pagina { margin-top:10px; } .cabecalho { margin:16px auto 20px; }
+ .atalhos { grid-template-columns:repeat(2,1fr); gap:8px; } .atalho { min-height:45px; font-size:12px; }
+ .conversor { border-radius:17px; } .cotacao { margin:21px 0; } .campos { grid-template-columns:1fr; gap:13px; }
+ .seta { padding:0; transform:rotate(90deg); } .cotacao-data { text-align:left; }
+ .acoes { flex-direction:column; } .acoes button { width:100%; } footer { flex-direction:column; text-align:center; }
 }
